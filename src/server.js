@@ -30,7 +30,7 @@ const server = app.listen(PORT, handleListening);
 
 // SocketIO는 WebSocket 서버와 WebSocket 클라이언트가 동시에 될 수 있다.
 // 즉, SocketIO로 서버를 프로그래밍 할 수 있고, SocketIO로 클라이언트도 프로그래밍 할 수 있다.
-const io = socketIO(server);
+const io = socketIO.listen(server);
 
 // localhost:4000/socket.io/socket.io.js로 들어가면 볼 수 있는 자바스크립트 코드는
 // SocketIO 백엔드와 프런트엔드가 서로 대화할 수 있게 해주는 코드이다.
